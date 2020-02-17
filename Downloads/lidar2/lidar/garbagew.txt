@@ -1,0 +1,446 @@
+g++ -std=c++17 -c -g -I/usr/local/frc/include -o lidar.o lidar.cpp
+lidar.cpp: In function ‘int main(int, char**)’:
+lidar.cpp:380:5: error: no match for ‘operator<’ (operand types are ‘std::ostream’ {aka ‘std::basic_ostream<char>’} and ‘std::basic_ostream<char>’)
+ cerr<
+ ~~~~^
+   cout << "Read " << bytes << " bytes of packet header\n";
+   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+lidar.cpp:380:5: note: candidate: ‘operator<(int, int)’ <built-in>
+lidar.cpp:380:5: note:   no known conversion for argument 2 from ‘std::basic_ostream<char>’ to ‘int’
+In file included from /usr/include/c++/8/utility:70,
+                 from /usr/include/c++/8/tuple:38,
+                 from /usr/include/c++/8/functional:54,
+                 from /usr/local/frc/include/ntcore_cpp.h:14,
+                 from /usr/local/frc/include/ntcore.h:16,
+                 from ntpublish.h:1,
+                 from lidar.cpp:3:
+/usr/include/c++/8/bits/stl_pair.h:454:5: note: candidate: ‘template<class _T1, class _T2> constexpr bool std::operator<(const std::pair<_T1, _T2>&, const std::pair<_T1, _T2>&)’
+     operator<(const pair<_T1, _T2>& __x, const pair<_T1, _T2>& __y)
+     ^~~~~~~~
+/usr/include/c++/8/bits/stl_pair.h:454:5: note:   template argument deduction/substitution failed:
+lidar.cpp:381:31: note:   ‘std::ostream’ {aka ‘std::basic_ostream<char>’} is not derived from ‘const std::pair<_T1, _T2>’
+   cout << "Read " << bytes << " bytes of packet header\n";
+                               ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from /usr/include/c++/8/bits/stl_algobase.h:67,
+                 from /usr/include/c++/8/bits/char_traits.h:39,
+                 from /usr/include/c++/8/string:40,
+                 from /usr/include/c++/8/stdexcept:39,
+                 from /usr/include/c++/8/array:39,
+                 from /usr/include/c++/8/tuple:39,
+                 from /usr/include/c++/8/functional:54,
+                 from /usr/local/frc/include/ntcore_cpp.h:14,
+                 from /usr/local/frc/include/ntcore.h:16,
+                 from ntpublish.h:1,
+                 from lidar.cpp:3:
+/usr/include/c++/8/bits/stl_iterator.h:308:5: note: candidate: ‘template<class _Iterator> constexpr bool std::operator<(const std::reverse_iterator<_Iterator>&, const std::reverse_iterator<_Iterator>&)’
+     operator<(const reverse_iterator<_Iterator>& __x,
+     ^~~~~~~~
+/usr/include/c++/8/bits/stl_iterator.h:308:5: note:   template argument deduction/substitution failed:
+lidar.cpp:381:31: note:   ‘std::ostream’ {aka ‘std::basic_ostream<char>’} is not derived from ‘const std::reverse_iterator<_Iterator>’
+   cout << "Read " << bytes << " bytes of packet header\n";
+                               ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from /usr/include/c++/8/bits/stl_algobase.h:67,
+                 from /usr/include/c++/8/bits/char_traits.h:39,
+                 from /usr/include/c++/8/string:40,
+                 from /usr/include/c++/8/stdexcept:39,
+                 from /usr/include/c++/8/array:39,
+                 from /usr/include/c++/8/tuple:39,
+                 from /usr/include/c++/8/functional:54,
+                 from /usr/local/frc/include/ntcore_cpp.h:14,
+                 from /usr/local/frc/include/ntcore.h:16,
+                 from ntpublish.h:1,
+                 from lidar.cpp:3:
+/usr/include/c++/8/bits/stl_iterator.h:346:5: note: candidate: ‘template<class _IteratorL, class _IteratorR> constexpr bool std::operator<(const std::reverse_iterator<_Iterator>&, const std::reverse_iterator<_IteratorR>&)’
+     operator<(const reverse_iterator<_IteratorL>& __x,
+     ^~~~~~~~
+/usr/include/c++/8/bits/stl_iterator.h:346:5: note:   template argument deduction/substitution failed:
+lidar.cpp:381:31: note:   ‘std::ostream’ {aka ‘std::basic_ostream<char>’} is not derived from ‘const std::reverse_iterator<_Iterator>’
+   cout << "Read " << bytes << " bytes of packet header\n";
+                               ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from /usr/include/c++/8/bits/stl_algobase.h:67,
+                 from /usr/include/c++/8/bits/char_traits.h:39,
+                 from /usr/include/c++/8/string:40,
+                 from /usr/include/c++/8/stdexcept:39,
+                 from /usr/include/c++/8/array:39,
+                 from /usr/include/c++/8/tuple:39,
+                 from /usr/include/c++/8/functional:54,
+                 from /usr/local/frc/include/ntcore_cpp.h:14,
+                 from /usr/local/frc/include/ntcore.h:16,
+                 from ntpublish.h:1,
+                 from lidar.cpp:3:
+/usr/include/c++/8/bits/stl_iterator.h:1139:5: note: candidate: ‘template<class _IteratorL, class _IteratorR> constexpr bool std::operator<(const std::move_iterator<_IteratorL>&, const std::move_iterator<_IteratorR>&)’
+     operator<(const move_iterator<_IteratorL>& __x,
+     ^~~~~~~~
+/usr/include/c++/8/bits/stl_iterator.h:1139:5: note:   template argument deduction/substitution failed:
+lidar.cpp:381:31: note:   ‘std::ostream’ {aka ‘std::basic_ostream<char>’} is not derived from ‘const std::move_iterator<_IteratorL>’
+   cout << "Read " << bytes << " bytes of packet header\n";
+                               ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from /usr/include/c++/8/bits/stl_algobase.h:67,
+                 from /usr/include/c++/8/bits/char_traits.h:39,
+                 from /usr/include/c++/8/string:40,
+                 from /usr/include/c++/8/stdexcept:39,
+                 from /usr/include/c++/8/array:39,
+                 from /usr/include/c++/8/tuple:39,
+                 from /usr/include/c++/8/functional:54,
+                 from /usr/local/frc/include/ntcore_cpp.h:14,
+                 from /usr/local/frc/include/ntcore.h:16,
+                 from ntpublish.h:1,
+                 from lidar.cpp:3:
+/usr/include/c++/8/bits/stl_iterator.h:1145:5: note: candidate: ‘template<class _Iterator> constexpr bool std::operator<(const std::move_iterator<_IteratorL>&, const std::move_iterator<_IteratorL>&)’
+     operator<(const move_iterator<_Iterator>& __x,
+     ^~~~~~~~
+/usr/include/c++/8/bits/stl_iterator.h:1145:5: note:   template argument deduction/substitution failed:
+lidar.cpp:381:31: note:   ‘std::ostream’ {aka ‘std::basic_ostream<char>’} is not derived from ‘const std::move_iterator<_IteratorL>’
+   cout << "Read " << bytes << " bytes of packet header\n";
+                               ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from /usr/include/c++/8/bits/basic_string.h:48,
+                 from /usr/include/c++/8/string:52,
+                 from /usr/include/c++/8/stdexcept:39,
+                 from /usr/include/c++/8/array:39,
+                 from /usr/include/c++/8/tuple:39,
+                 from /usr/include/c++/8/functional:54,
+                 from /usr/local/frc/include/ntcore_cpp.h:14,
+                 from /usr/local/frc/include/ntcore.h:16,
+                 from ntpublish.h:1,
+                 from lidar.cpp:3:
+/usr/include/c++/8/string_view:472:5: note: candidate: ‘template<class _CharT, class _Traits> constexpr bool std::operator<(std::basic_string_view<_CharT, _Traits>, std::basic_string_view<_CharT, _Traits>)’
+     operator< (basic_string_view<_CharT, _Traits> __x,
+     ^~~~~~~~
+/usr/include/c++/8/string_view:472:5: note:   template argument deduction/substitution failed:
+lidar.cpp:381:31: note:   ‘std::basic_ostream<char>’ is not derived from ‘std::basic_string_view<_CharT, _Traits>’
+   cout << "Read " << bytes << " bytes of packet header\n";
+                               ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from /usr/include/c++/8/bits/basic_string.h:48,
+                 from /usr/include/c++/8/string:52,
+                 from /usr/include/c++/8/stdexcept:39,
+                 from /usr/include/c++/8/array:39,
+                 from /usr/include/c++/8/tuple:39,
+                 from /usr/include/c++/8/functional:54,
+                 from /usr/local/frc/include/ntcore_cpp.h:14,
+                 from /usr/local/frc/include/ntcore.h:16,
+                 from ntpublish.h:1,
+                 from lidar.cpp:3:
+/usr/include/c++/8/string_view:478:5: note: candidate: ‘template<class _CharT, class _Traits> constexpr bool std::operator<(std::basic_string_view<_CharT, _Traits>, std::__detail::__idt<std::basic_string_view<_CharT, _Traits> >)’
+     operator< (basic_string_view<_CharT, _Traits> __x,
+     ^~~~~~~~
+/usr/include/c++/8/string_view:478:5: note:   template argument deduction/substitution failed:
+lidar.cpp:381:31: note:   ‘std::basic_ostream<char>’ is not derived from ‘std::basic_string_view<_CharT, _Traits>’
+   cout << "Read " << bytes << " bytes of packet header\n";
+                               ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from /usr/include/c++/8/bits/basic_string.h:48,
+                 from /usr/include/c++/8/string:52,
+                 from /usr/include/c++/8/stdexcept:39,
+                 from /usr/include/c++/8/array:39,
+                 from /usr/include/c++/8/tuple:39,
+                 from /usr/include/c++/8/functional:54,
+                 from /usr/local/frc/include/ntcore_cpp.h:14,
+                 from /usr/local/frc/include/ntcore.h:16,
+                 from ntpublish.h:1,
+                 from lidar.cpp:3:
+/usr/include/c++/8/string_view:484:5: note: candidate: ‘template<class _CharT, class _Traits> constexpr bool std::operator<(std::__detail::__idt<std::basic_string_view<_CharT, _Traits> >, std::basic_string_view<_CharT, _Traits>)’
+     operator< (__detail::__idt<basic_string_view<_CharT, _Traits>> __x,
+     ^~~~~~~~
+/usr/include/c++/8/string_view:484:5: note:   template argument deduction/substitution failed:
+lidar.cpp:381:31: note:   ‘std::basic_ostream<char>’ is not derived from ‘std::basic_string_view<_CharT, _Traits>’
+   cout << "Read " << bytes << " bytes of packet header\n";
+                               ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from /usr/include/c++/8/string:52,
+                 from /usr/include/c++/8/stdexcept:39,
+                 from /usr/include/c++/8/array:39,
+                 from /usr/include/c++/8/tuple:39,
+                 from /usr/include/c++/8/functional:54,
+                 from /usr/local/frc/include/ntcore_cpp.h:14,
+                 from /usr/local/frc/include/ntcore.h:16,
+                 from ntpublish.h:1,
+                 from lidar.cpp:3:
+/usr/include/c++/8/bits/basic_string.h:6133:5: note: candidate: ‘template<class _CharT, class _Traits, class _Alloc> bool std::operator<(const std::__cxx11::basic_string<_CharT, _Traits, _Allocator>&, const std::__cxx11::basic_string<_CharT, _Traits, _Allocator>&)’
+     operator<(const basic_string<_CharT, _Traits, _Alloc>& __lhs,
+     ^~~~~~~~
+/usr/include/c++/8/bits/basic_string.h:6133:5: note:   template argument deduction/substitution failed:
+lidar.cpp:381:31: note:   ‘std::ostream’ {aka ‘std::basic_ostream<char>’} is not derived from ‘const std::__cxx11::basic_string<_CharT, _Traits, _Allocator>’
+   cout << "Read " << bytes << " bytes of packet header\n";
+                               ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from /usr/include/c++/8/string:52,
+                 from /usr/include/c++/8/stdexcept:39,
+                 from /usr/include/c++/8/array:39,
+                 from /usr/include/c++/8/tuple:39,
+                 from /usr/include/c++/8/functional:54,
+                 from /usr/local/frc/include/ntcore_cpp.h:14,
+                 from /usr/local/frc/include/ntcore.h:16,
+                 from ntpublish.h:1,
+                 from lidar.cpp:3:
+/usr/include/c++/8/bits/basic_string.h:6146:5: note: candidate: ‘template<class _CharT, class _Traits, class _Alloc> bool std::operator<(const std::__cxx11::basic_string<_CharT, _Traits, _Allocator>&, const _CharT*)’
+     operator<(const basic_string<_CharT, _Traits, _Alloc>& __lhs,
+     ^~~~~~~~
+/usr/include/c++/8/bits/basic_string.h:6146:5: note:   template argument deduction/substitution failed:
+lidar.cpp:381:31: note:   ‘std::ostream’ {aka ‘std::basic_ostream<char>’} is not derived from ‘const std::__cxx11::basic_string<_CharT, _Traits, _Allocator>’
+   cout << "Read " << bytes << " bytes of packet header\n";
+                               ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from /usr/include/c++/8/string:52,
+                 from /usr/include/c++/8/stdexcept:39,
+                 from /usr/include/c++/8/array:39,
+                 from /usr/include/c++/8/tuple:39,
+                 from /usr/include/c++/8/functional:54,
+                 from /usr/local/frc/include/ntcore_cpp.h:14,
+                 from /usr/local/frc/include/ntcore.h:16,
+                 from ntpublish.h:1,
+                 from lidar.cpp:3:
+/usr/include/c++/8/bits/basic_string.h:6158:5: note: candidate: ‘template<class _CharT, class _Traits, class _Alloc> bool std::operator<(const _CharT*, const std::__cxx11::basic_string<_CharT, _Traits, _Allocator>&)’
+     operator<(const _CharT* __lhs,
+     ^~~~~~~~
+/usr/include/c++/8/bits/basic_string.h:6158:5: note:   template argument deduction/substitution failed:
+lidar.cpp:381:31: note:   mismatched types ‘const _CharT*’ and ‘std::basic_ostream<char>’
+   cout << "Read " << bytes << " bytes of packet header\n";
+                               ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from /usr/include/c++/8/tuple:39,
+                 from /usr/include/c++/8/functional:54,
+                 from /usr/local/frc/include/ntcore_cpp.h:14,
+                 from /usr/local/frc/include/ntcore.h:16,
+                 from ntpublish.h:1,
+                 from lidar.cpp:3:
+/usr/include/c++/8/array:262:5: note: candidate: ‘template<class _Tp, unsigned int _Nm> bool std::operator<(const std::array<_Tp, _Nm>&, const std::array<_Tp, _Nm>&)’
+     operator<(const array<_Tp, _Nm>& __a, const array<_Tp, _Nm>& __b)
+     ^~~~~~~~
+/usr/include/c++/8/array:262:5: note:   template argument deduction/substitution failed:
+lidar.cpp:381:31: note:   ‘std::ostream’ {aka ‘std::basic_ostream<char>’} is not derived from ‘const std::array<_Tp, _Nm>’
+   cout << "Read " << bytes << " bytes of packet header\n";
+                               ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from /usr/include/c++/8/functional:54,
+                 from /usr/local/frc/include/ntcore_cpp.h:14,
+                 from /usr/local/frc/include/ntcore.h:16,
+                 from ntpublish.h:1,
+                 from lidar.cpp:3:
+/usr/include/c++/8/tuple:1426:5: note: candidate: ‘template<class ... _TElements, class ... _UElements> constexpr bool std::operator<(const std::tuple<_Tps ...>&, const std::tuple<_Elements ...>&)’
+     operator<(const tuple<_TElements...>& __t,
+     ^~~~~~~~
+/usr/include/c++/8/tuple:1426:5: note:   template argument deduction/substitution failed:
+lidar.cpp:381:31: note:   ‘std::ostream’ {aka ‘std::basic_ostream<char>’} is not derived from ‘const std::tuple<_Tps ...>’
+   cout << "Read " << bytes << " bytes of packet header\n";
+                               ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from /usr/include/c++/8/bits/node_handle.h:39,
+                 from /usr/include/c++/8/bits/hashtable.h:37,
+                 from /usr/include/c++/8/unordered_map:46,
+                 from /usr/include/c++/8/functional:61,
+                 from /usr/local/frc/include/ntcore_cpp.h:14,
+                 from /usr/local/frc/include/ntcore.h:16,
+                 from ntpublish.h:1,
+                 from lidar.cpp:3:
+/usr/include/c++/8/optional:1297:5: note: candidate: ‘template<class _Tp, class _Up> constexpr std::__optional_relop_t<decltype ((declval<_Tp>() < declval<_Up>()))> std::operator<(const std::optional<_Tp>&, const std::optional<_Up>&)’
+     operator<(const optional<_Tp>& __lhs, const optional<_Up>& __rhs)
+     ^~~~~~~~
+/usr/include/c++/8/optional:1297:5: note:   template argument deduction/substitution failed:
+lidar.cpp:381:31: note:   ‘std::ostream’ {aka ‘std::basic_ostream<char>’} is not derived from ‘const std::optional<_Tp>’
+   cout << "Read " << bytes << " bytes of packet header\n";
+                               ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from /usr/include/c++/8/bits/node_handle.h:39,
+                 from /usr/include/c++/8/bits/hashtable.h:37,
+                 from /usr/include/c++/8/unordered_map:46,
+                 from /usr/include/c++/8/functional:61,
+                 from /usr/local/frc/include/ntcore_cpp.h:14,
+                 from /usr/local/frc/include/ntcore.h:16,
+                 from ntpublish.h:1,
+                 from lidar.cpp:3:
+/usr/include/c++/8/optional:1350:5: note: candidate: ‘template<class _Tp> constexpr bool std::operator<(const std::optional<_Tp>&, std::nullopt_t)’
+     operator<(const optional<_Tp>& /* __lhs */, nullopt_t) noexcept
+     ^~~~~~~~
+/usr/include/c++/8/optional:1350:5: note:   template argument deduction/substitution failed:
+lidar.cpp:381:31: note:   ‘std::ostream’ {aka ‘std::basic_ostream<char>’} is not derived from ‘const std::optional<_Tp>’
+   cout << "Read " << bytes << " bytes of packet header\n";
+                               ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from /usr/include/c++/8/bits/node_handle.h:39,
+                 from /usr/include/c++/8/bits/hashtable.h:37,
+                 from /usr/include/c++/8/unordered_map:46,
+                 from /usr/include/c++/8/functional:61,
+                 from /usr/local/frc/include/ntcore_cpp.h:14,
+                 from /usr/local/frc/include/ntcore.h:16,
+                 from ntpublish.h:1,
+                 from lidar.cpp:3:
+/usr/include/c++/8/optional:1355:5: note: candidate: ‘template<class _Tp> constexpr bool std::operator<(std::nullopt_t, const std::optional<_Tp>&)’
+     operator<(nullopt_t, const optional<_Tp>& __rhs) noexcept
+     ^~~~~~~~
+/usr/include/c++/8/optional:1355:5: note:   template argument deduction/substitution failed:
+lidar.cpp:381:31: note:   ‘std::basic_ostream<char>’ is not derived from ‘const std::optional<_Tp>’
+   cout << "Read " << bytes << " bytes of packet header\n";
+                               ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from /usr/include/c++/8/bits/node_handle.h:39,
+                 from /usr/include/c++/8/bits/hashtable.h:37,
+                 from /usr/include/c++/8/unordered_map:46,
+                 from /usr/include/c++/8/functional:61,
+                 from /usr/local/frc/include/ntcore_cpp.h:14,
+                 from /usr/local/frc/include/ntcore.h:16,
+                 from ntpublish.h:1,
+                 from lidar.cpp:3:
+/usr/include/c++/8/optional:1415:5: note: candidate: ‘template<class _Tp, class _Up> constexpr std::__optional_relop_t<decltype ((declval<_Tp>() < declval<_Up>()))> std::operator<(const std::optional<_Tp>&, const _Up&)’
+     operator<(const optional<_Tp>& __lhs, const _Up& __rhs)
+     ^~~~~~~~
+/usr/include/c++/8/optional:1415:5: note:   template argument deduction/substitution failed:
+lidar.cpp:381:31: note:   ‘std::ostream’ {aka ‘std::basic_ostream<char>’} is not derived from ‘const std::optional<_Tp>’
+   cout << "Read " << bytes << " bytes of packet header\n";
+                               ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from /usr/include/c++/8/bits/node_handle.h:39,
+                 from /usr/include/c++/8/bits/hashtable.h:37,
+                 from /usr/include/c++/8/unordered_map:46,
+                 from /usr/include/c++/8/functional:61,
+                 from /usr/local/frc/include/ntcore_cpp.h:14,
+                 from /usr/local/frc/include/ntcore.h:16,
+                 from ntpublish.h:1,
+                 from lidar.cpp:3:
+/usr/include/c++/8/optional:1421:5: note: candidate: ‘template<class _Tp, class _Up> constexpr std::__optional_relop_t<decltype ((declval<_Up>() < declval<_Tp>()))> std::operator<(const _Up&, const std::optional<_Tp>&)’
+     operator<(const _Up& __lhs, const optional<_Tp>& __rhs)
+     ^~~~~~~~
+/usr/include/c++/8/optional:1421:5: note:   template argument deduction/substitution failed:
+lidar.cpp:381:31: note:   ‘std::basic_ostream<char>’ is not derived from ‘const std::optional<_Tp>’
+   cout << "Read " << bytes << " bytes of packet header\n";
+                               ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from /usr/include/c++/8/vector:64,
+                 from /usr/include/c++/8/functional:62,
+                 from /usr/local/frc/include/ntcore_cpp.h:14,
+                 from /usr/local/frc/include/ntcore.h:16,
+                 from ntpublish.h:1,
+                 from lidar.cpp:3:
+/usr/include/c++/8/bits/stl_vector.h:1770:5: note: candidate: ‘template<class _Tp, class _Alloc> bool std::operator<(const std::vector<_Tp, _Alloc>&, const std::vector<_Tp, _Alloc>&)’
+     operator<(const vector<_Tp, _Alloc>& __x, const vector<_Tp, _Alloc>& __y)
+     ^~~~~~~~
+/usr/include/c++/8/bits/stl_vector.h:1770:5: note:   template argument deduction/substitution failed:
+lidar.cpp:381:31: note:   ‘std::ostream’ {aka ‘std::basic_ostream<char>’} is not derived from ‘const std::vector<_Tp, _Alloc>’
+   cout << "Read " << bytes << " bytes of packet header\n";
+                               ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from /usr/include/c++/8/memory:80,
+                 from /usr/local/frc/include/ntcore_cpp.h:15,
+                 from /usr/local/frc/include/ntcore.h:16,
+                 from ntpublish.h:1,
+                 from lidar.cpp:3:
+/usr/include/c++/8/bits/unique_ptr.h:723:5: note: candidate: ‘template<class _Tp, class _Dp, class _Up, class _Ep> bool std::operator<(const std::unique_ptr<_Tp, _Dp>&, const std::unique_ptr<_Up, _Ep>&)’
+     operator<(const unique_ptr<_Tp, _Dp>& __x,
+     ^~~~~~~~
+/usr/include/c++/8/bits/unique_ptr.h:723:5: note:   template argument deduction/substitution failed:
+lidar.cpp:381:31: note:   ‘std::ostream’ {aka ‘std::basic_ostream<char>’} is not derived from ‘const std::unique_ptr<_Tp, _Dp>’
+   cout << "Read " << bytes << " bytes of packet header\n";
+                               ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from /usr/include/c++/8/memory:80,
+                 from /usr/local/frc/include/ntcore_cpp.h:15,
+                 from /usr/local/frc/include/ntcore.h:16,
+                 from ntpublish.h:1,
+                 from lidar.cpp:3:
+/usr/include/c++/8/bits/unique_ptr.h:734:5: note: candidate: ‘template<class _Tp, class _Dp> bool std::operator<(const std::unique_ptr<_Tp, _Dp>&, std::nullptr_t)’
+     operator<(const unique_ptr<_Tp, _Dp>& __x, nullptr_t)
+     ^~~~~~~~
+/usr/include/c++/8/bits/unique_ptr.h:734:5: note:   template argument deduction/substitution failed:
+lidar.cpp:381:31: note:   ‘std::ostream’ {aka ‘std::basic_ostream<char>’} is not derived from ‘const std::unique_ptr<_Tp, _Dp>’
+   cout << "Read " << bytes << " bytes of packet header\n";
+                               ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from /usr/include/c++/8/memory:80,
+                 from /usr/local/frc/include/ntcore_cpp.h:15,
+                 from /usr/local/frc/include/ntcore.h:16,
+                 from ntpublish.h:1,
+                 from lidar.cpp:3:
+/usr/include/c++/8/bits/unique_ptr.h:740:5: note: candidate: ‘template<class _Tp, class _Dp> bool std::operator<(std::nullptr_t, const std::unique_ptr<_Tp, _Dp>&)’
+     operator<(nullptr_t, const unique_ptr<_Tp, _Dp>& __x)
+     ^~~~~~~~
+/usr/include/c++/8/bits/unique_ptr.h:740:5: note:   template argument deduction/substitution failed:
+lidar.cpp:381:31: note:   ‘std::basic_ostream<char>’ is not derived from ‘const std::unique_ptr<_Tp, _Dp>’
+   cout << "Read " << bytes << " bytes of packet header\n";
+                               ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from /usr/include/c++/8/bits/shared_ptr.h:52,
+                 from /usr/include/c++/8/memory:81,
+                 from /usr/local/frc/include/ntcore_cpp.h:15,
+                 from /usr/local/frc/include/ntcore.h:16,
+                 from ntpublish.h:1,
+                 from lidar.cpp:3:
+/usr/include/c++/8/bits/shared_ptr_base.h:1442:5: note: candidate: ‘template<class _Tp, class _Up, __gnu_cxx::_Lock_policy _Lp> bool std::operator<(const std::__shared_ptr<_Tp1, _Lp>&, const std::__shared_ptr<_Tp2, _Lp>&)’
+     operator<(const __shared_ptr<_Tp, _Lp>& __a,
+     ^~~~~~~~
+/usr/include/c++/8/bits/shared_ptr_base.h:1442:5: note:   template argument deduction/substitution failed:
+lidar.cpp:381:31: note:   ‘std::ostream’ {aka ‘std::basic_ostream<char>’} is not derived from ‘const std::__shared_ptr<_Tp1, _Lp>’
+   cout << "Read " << bytes << " bytes of packet header\n";
+                               ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from /usr/include/c++/8/bits/shared_ptr.h:52,
+                 from /usr/include/c++/8/memory:81,
+                 from /usr/local/frc/include/ntcore_cpp.h:15,
+                 from /usr/local/frc/include/ntcore.h:16,
+                 from ntpublish.h:1,
+                 from lidar.cpp:3:
+/usr/include/c++/8/bits/shared_ptr_base.h:1453:5: note: candidate: ‘template<class _Tp, __gnu_cxx::_Lock_policy _Lp> bool std::operator<(const std::__shared_ptr<_Tp, _Lp>&, std::nullptr_t)’
+     operator<(const __shared_ptr<_Tp, _Lp>& __a, nullptr_t) noexcept
+     ^~~~~~~~
+/usr/include/c++/8/bits/shared_ptr_base.h:1453:5: note:   template argument deduction/substitution failed:
+lidar.cpp:381:31: note:   ‘std::ostream’ {aka ‘std::basic_ostream<char>’} is not derived from ‘const std::__shared_ptr<_Tp, _Lp>’
+   cout << "Read " << bytes << " bytes of packet header\n";
+                               ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from /usr/include/c++/8/bits/shared_ptr.h:52,
+                 from /usr/include/c++/8/memory:81,
+                 from /usr/local/frc/include/ntcore_cpp.h:15,
+                 from /usr/local/frc/include/ntcore.h:16,
+                 from ntpublish.h:1,
+                 from lidar.cpp:3:
+/usr/include/c++/8/bits/shared_ptr_base.h:1461:5: note: candidate: ‘template<class _Tp, __gnu_cxx::_Lock_policy _Lp> bool std::operator<(std::nullptr_t, const std::__shared_ptr<_Tp, _Lp>&)’
+     operator<(nullptr_t, const __shared_ptr<_Tp, _Lp>& __a) noexcept
+     ^~~~~~~~
+/usr/include/c++/8/bits/shared_ptr_base.h:1461:5: note:   template argument deduction/substitution failed:
+lidar.cpp:381:31: note:   ‘std::basic_ostream<char>’ is not derived from ‘const std::__shared_ptr<_Tp, _Lp>’
+   cout << "Read " << bytes << " bytes of packet header\n";
+                               ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from /usr/include/c++/8/memory:81,
+                 from /usr/local/frc/include/ntcore_cpp.h:15,
+                 from /usr/local/frc/include/ntcore.h:16,
+                 from ntpublish.h:1,
+                 from lidar.cpp:3:
+/usr/include/c++/8/bits/shared_ptr.h:413:5: note: candidate: ‘template<class _Tp, class _Up> bool std::operator<(const std::shared_ptr<_Tp>&, const std::shared_ptr<_Tp>&)’
+     operator<(const shared_ptr<_Tp>& __a, const shared_ptr<_Up>& __b) noexcept
+     ^~~~~~~~
+/usr/include/c++/8/bits/shared_ptr.h:413:5: note:   template argument deduction/substitution failed:
+lidar.cpp:381:31: note:   ‘std::ostream’ {aka ‘std::basic_ostream<char>’} is not derived from ‘const std::shared_ptr<_Tp>’
+   cout << "Read " << bytes << " bytes of packet header\n";
+                               ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from /usr/include/c++/8/memory:81,
+                 from /usr/local/frc/include/ntcore_cpp.h:15,
+                 from /usr/local/frc/include/ntcore.h:16,
+                 from ntpublish.h:1,
+                 from lidar.cpp:3:
+/usr/include/c++/8/bits/shared_ptr.h:423:5: note: candidate: ‘template<class _Tp> bool std::operator<(const std::shared_ptr<_Tp>&, std::nullptr_t)’
+     operator<(const shared_ptr<_Tp>& __a, nullptr_t) noexcept
+     ^~~~~~~~
+/usr/include/c++/8/bits/shared_ptr.h:423:5: note:   template argument deduction/substitution failed:
+lidar.cpp:381:31: note:   ‘std::ostream’ {aka ‘std::basic_ostream<char>’} is not derived from ‘const std::shared_ptr<_Tp>’
+   cout << "Read " << bytes << " bytes of packet header\n";
+                               ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from /usr/include/c++/8/memory:81,
+                 from /usr/local/frc/include/ntcore_cpp.h:15,
+                 from /usr/local/frc/include/ntcore.h:16,
+                 from ntpublish.h:1,
+                 from lidar.cpp:3:
+/usr/include/c++/8/bits/shared_ptr.h:431:5: note: candidate: ‘template<class _Tp> bool std::operator<(std::nullptr_t, const std::shared_ptr<_Tp>&)’
+     operator<(nullptr_t, const shared_ptr<_Tp>& __a) noexcept
+     ^~~~~~~~
+/usr/include/c++/8/bits/shared_ptr.h:431:5: note:   template argument deduction/substitution failed:
+lidar.cpp:381:31: note:   ‘std::basic_ostream<char>’ is not derived from ‘const std::shared_ptr<_Tp>’
+   cout << "Read " << bytes << " bytes of packet header\n";
+                               ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from /usr/local/frc/include/ntcore_cpp.h:17,
+                 from /usr/local/frc/include/ntcore.h:16,
+                 from ntpublish.h:1,
+                 from lidar.cpp:3:
+/usr/include/c++/8/thread:291:3: note: candidate: ‘bool std::operator<(std::thread::id, std::thread::id)’
+   operator<(thread::id __x, thread::id __y) noexcept
+   ^~~~~~~~
+/usr/include/c++/8/thread:291:3: note:   no known conversion for argument 1 from ‘std::ostream’ {aka ‘std::basic_ostream<char>’} to ‘std::thread::id’
+In file included from /usr/include/c++/8/bits/ios_base.h:46,
+                 from /usr/include/c++/8/ios:42,
+                 from /usr/include/c++/8/ostream:38,
+                 from /usr/include/c++/8/iterator:64,
+                 from /usr/local/frc/include/wpi/iterator_range.h:22,
+                 from /usr/local/frc/include/wpi/SmallVector.h:25,
+                 from /usr/local/frc/include/wpi/ArrayRef.h:14,
+                 from /usr/local/frc/include/ntcore_cpp.h:21,
+                 from /usr/local/frc/include/ntcore.h:16,
+                 from ntpublish.h:1,
+                 from lidar.cpp:3:
+/usr/include/c++/8/system_error:208:3: note: candidate: ‘bool std::operator<(const std::error_code&, const std::error_code&)’
+   operator<(const error_code& __lhs, const error_code& __rhs) noexcept
+   ^~~~~~~~
+/usr/include/c++/8/system_error:208:3: note:   no known conversion for argument 1 from ‘std::ostream’ {aka ‘std::basic_ostream<char>’} to ‘const std::error_code&’
+/usr/include/c++/8/system_error:282:3: note: candidate: ‘bool std::operator<(const std::error_condition&, const std::error_condition&)’
+   operator<(const error_condition& __lhs,
+   ^~~~~~~~
+/usr/include/c++/8/system_error:282:3: note:   no known conversion for argument 1 from ‘std::ostream’ {aka ‘std::basic_ostream<char>’} to ‘const std::error_condition&’
+make: *** [Makefile:2: lidar.o] Error 1

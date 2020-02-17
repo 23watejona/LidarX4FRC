@@ -1,0 +1,2 @@
+
+void setupSerial(int fd);
