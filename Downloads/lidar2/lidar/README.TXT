@@ -1,4 +1,4 @@
-Run make command in the home directory, that's all that should be necessary to generate executables.
+Run make command in the lidar directory, that's all that should be necessary to generate executables.
 
 To run, execute lidar.exe.
 
